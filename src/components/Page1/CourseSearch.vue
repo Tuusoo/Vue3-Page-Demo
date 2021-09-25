@@ -21,9 +21,7 @@
         default-value="Master Degree"
       />
     </div>
-    <div class="redButton">
-      Search
-    </div>
+    <div class="redButton">Search</div>
   </div>
 </template>
 
@@ -56,16 +54,16 @@ export default {
   height: 450px;
   background: #000000;
   position: absolute;
-  right: 170px;
+  right: 20%;
   bottom: -350px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  color: #FFFFFF;
+  color: #ffffff;
   .title {
-    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 24px;
   }
   .selectors {
@@ -86,6 +84,12 @@ export default {
     border-radius: 2px;
     letter-spacing: 0.5px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s,color 0.3s;
+    &:hover {
+      color: #FFFFFF;
+      background: #cc2105;
+    }
   }
 }
 </style>

@@ -24,7 +24,8 @@
     <div class="content">
       <div class="title">
         WHAT WOULD
-        <span>YOU LIKE</span> TO LEARN?
+        <span>YOU LIKE</span><br />
+        TO LEARN?
       </div>
       <div class="button">Know More</div>
     </div>
@@ -128,7 +129,6 @@ export default {
   }
   .content {
     height: 90vh;
-    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;

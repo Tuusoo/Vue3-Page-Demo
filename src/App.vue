@@ -52,6 +52,11 @@ div {
 }
 
 @font-face {
+  font-family: "Montserrat-Medium";
+  src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
   font-family: "Roboto-Bold";
   src: url(./fonts/Roboto-Bold.ttf);
 }
