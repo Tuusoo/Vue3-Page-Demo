@@ -5,6 +5,12 @@
   <Page4 />
   <Page5 />
   <Page6 />
+  <img
+    src="../imgs/move-top.png"
+    class="moveTop"
+    v-show="!isTop"
+    @click="scrollToTop"
+  />
 </template>
 
 <script>
@@ -25,5 +31,37 @@ export default {
     Page5,
     Page6,
   },
+  data() {
+    return {
+      isTop: true,
+      topDistance: 0,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScrollx);
+  },
+  methods: {
+    handleScrollx() {
+      this.topDistance = window.pageYOffset;
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+  watch: {
+    topDistance(val) {
+      this.isTop = val > 200 ? false : true;
+    },
+  },
 };
 </script>
+
+<style lang="less" scoped>
+.moveTop {
+  position: fixed;
+  width: 30px;
+  right: 60px;
+  bottom: 30px;
+  cursor: pointer;
+}
+</style>

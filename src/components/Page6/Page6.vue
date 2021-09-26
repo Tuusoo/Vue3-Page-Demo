@@ -1,25 +1,25 @@
 <template>
   <div class="whitearea container">
     <h3>OUR <span>ACHIEVEMENTS</span></h3>
-    <div class="items">
+    <div class="items" ref="nums">
       <div class="item">
         <img src="../../imgs/champion.svg" />
-        <div class="num">2001</div>
+        <div class="num"><NumTimer :num="num1" :isStart="isNumShow" /></div>
         <div class="text">Year of Foundation</div>
       </div>
       <div class="item">
         <img src="../../imgs/hat.svg" />
-        <div class="num">765</div>
+        <div class="num"><NumTimer :num="num2" :isStart="isNumShow" /></div>
         <div class="text">Graduates</div>
       </div>
       <div class="item">
         <img src="../../imgs/a_man.svg" />
-        <div class="num">125</div>
+        <div class="num"><NumTimer :num="num3" :isStart="isNumShow" /></div>
         <div class="text">Certified Staff</div>
       </div>
       <div class="item">
         <img src="../../imgs/3_man.svg" />
-        <div class="num">150</div>
+        <div class="num"><NumTimer :num="num4" :isStart="isNumShow" /></div>
         <div class="text">Students</div>
       </div>
     </div>
@@ -93,6 +93,8 @@
 </template>
 
 <script>
+import NumTimer from "./numTimer.vue";
+
 export default {
   data() {
     return {
@@ -100,7 +102,15 @@ export default {
       icon2Hover: false,
       icon3Hover: false,
       icon4Hover: false,
+      isNumShow: false,
+      num1: 2001,
+      num2: 765,
+      num3: 125,
+      num4: 150,
     };
+  },
+  components: {
+    NumTimer,
   },
   methods: {
     hover1() {
@@ -115,6 +125,21 @@ export default {
     hover4() {
       this.icon4Hover = !this.icon4Hover;
     },
+    numDistance() {
+      if (
+        this.$refs.nums.offsetTop -
+          document.documentElement.scrollTop -
+          document.documentElement.clientHeight <
+        0
+      ) {
+        this.isNumShow = true;
+      } else {
+        this.isNumShow = false;
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.numDistance);
   },
 };
 </script>
@@ -146,6 +171,7 @@ export default {
       align-items: center;
       img {
         width: 40px;
+        height: 40px;
       }
       div {
         margin-top: 10px;
