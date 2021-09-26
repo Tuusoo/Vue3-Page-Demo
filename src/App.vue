@@ -66,6 +66,11 @@ h6 {
 }
 
 @font-face {
+  font-family: "Montserrat-Regular";
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
   font-family: "Roboto-Bold";
   src: url(./fonts/Roboto-Bold.ttf);
 }

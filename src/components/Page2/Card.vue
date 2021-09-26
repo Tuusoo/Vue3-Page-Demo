@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    detail: Array,
+    detail: Object,
   },
   data() {
     return {
