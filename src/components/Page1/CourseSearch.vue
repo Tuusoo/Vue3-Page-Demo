@@ -54,7 +54,7 @@ export default {
   height: 450px;
   background: #000000;
   position: absolute;
-  right: 20%;
+  transform: translateX(360px);
   bottom: -350px;
   padding: 30px;
   display: flex;
@@ -62,6 +62,7 @@ export default {
   align-items: center;
   justify-content: space-around;
   color: #ffffff;
+  z-index: 1;
   .title {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 24px;
@@ -85,9 +86,9 @@ export default {
     letter-spacing: 0.5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s,color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background: #cc2105;
     }
   }

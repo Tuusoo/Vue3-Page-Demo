@@ -156,7 +156,7 @@ export default {
       font-size: 16px;
       line-height: 40px;
       margin-top: 40px;
-      transition: background-color 0.3s, transform 0.5s;
+      transition: background-color 0.3s, transform 0.6s;
       cursor: pointer;
       &:hover {
         background: #0ebeff;

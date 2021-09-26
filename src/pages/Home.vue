@@ -2,12 +2,14 @@
   <Page1 />
   <Page2 />
   <Page3 />
+  <Page4 />
 </template>
 
 <script>
 import Page1 from "../components/Page1/Page1.vue";
 import Page2 from "../components/Page2/Page2.vue";
 import Page3 from "../components/Page3/Page3.vue";
+import Page4 from "../components/Page4/Page4.vue";
 
 export default {
   name: "Home",
@@ -15,6 +17,7 @@ export default {
     Page1,
     Page2,
     Page3,
+    Page4,
   },
 };
 </script>

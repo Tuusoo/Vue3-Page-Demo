@@ -39,9 +39,10 @@ export default {
   background: url(../../imgs/bg2.jpg) fixed;
   background-size: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 calc((100vw - 1100px) / 2);
   .leftarea {
-    width: 25%;
+    width: 50%;
     color: #ffffff;
     margin: 100px 0 200px 0;
     .title {

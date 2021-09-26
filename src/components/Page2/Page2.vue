@@ -54,8 +54,9 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  width: 60%;
-  margin-left: 20%;
+  width: 1100px;
+  margin-left: 50%;
+  transform: translateX(-50%);
   padding: 50px 0 100px 0;
   .title {
     letter-spacing: 2px;
