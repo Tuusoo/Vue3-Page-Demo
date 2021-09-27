@@ -5,8 +5,16 @@
 <script>
 export default {
   props: {
-    num: Number,
-    isStart: Boolean,
+    num: {
+      type: Number,
+      default: 2001,
+      required: true,
+    },
+    isStart: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
   },
   data() {
     return {
@@ -25,6 +33,7 @@ export default {
         }, 1000);
       } else {
         this.numChanger = 0;
+        clearInterval(this.Timer);
       }
     },
     numChanger(val) {
@@ -32,6 +41,9 @@ export default {
         clearInterval(this.Timer);
       }
     },
+  },
+  unmounted() {
+    clearInterval(this.Timer);
   },
 };
 </script>
