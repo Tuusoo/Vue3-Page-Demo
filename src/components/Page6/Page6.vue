@@ -114,10 +114,16 @@ export default {
     };
   },
   mounted() {
-    const numsObserver = new IntersectionObserver(() => {
-      this.isNumShow = !this.isNumShow;
+    const numsObserver = new IntersectionObserver((items) => {
+      items.forEach((item) => {
+        console.log(item);
+        if (item.intersectionRatio > 0) {
+          this.isNumShow = true;
+        } else {
+          this.isNumShow = false;
+        }
+      });
     });
-
     numsObserver.observe(this.$refs.nums);
   },
   methods: {
