@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: "Page2Card",
   props: {
     detail: Object,
   },

@@ -22,6 +22,10 @@
 import Card from "./Card";
 
 export default {
+  name: "Page2",
+  components: {
+    Card,
+  },
   data() {
     return {
       cardsText: [
@@ -45,9 +49,6 @@ export default {
         },
       ],
     };
-  },
-  components: {
-    Card,
   },
 };
 </script>

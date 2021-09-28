@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: "NumTimer",
   props: {
     num: {
       type: Number,

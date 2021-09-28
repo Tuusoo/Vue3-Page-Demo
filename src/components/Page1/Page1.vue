@@ -36,8 +36,13 @@
 <script>
 import { NPopselect } from "naive-ui";
 import CourseSearch from "./CourseSearch.vue";
+
 export default {
   name: "Page1",
+  components: {
+    NPopselect,
+    CourseSearch,
+  },
   data() {
     return {
       chooseValue: "",
@@ -47,10 +52,6 @@ export default {
         { label: "Gallery", value: "Gallery" },
       ]),
     };
-  },
-  components: {
-    NPopselect,
-    CourseSearch,
   },
   methods: {
     originalPage() {

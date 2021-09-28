@@ -25,6 +25,7 @@
 import Card from "./Card.vue";
 
 export default {
+  name: "Page5",
   components: {
     Card,
   },
@@ -54,6 +55,15 @@ export default {
         return this.cards.length / 3;
       }
       return this.cards.length / 3 + 1;
+    },
+  },
+  watch: {
+    currentPic(val) {
+      this.$refs.navPoint.children.forEach(
+        (i) => (i.style.background = "#c1bebe")
+      );
+      this.$refs.navPoint.children[parseInt(val / 3)].style.background =
+        "#ffffff";
     },
   },
   mounted() {
@@ -89,15 +99,6 @@ export default {
       clearInterval(this.rotateTimer);
       this.currentPic = index * 3;
       this.rotate();
-    },
-  },
-  watch: {
-    currentPic(val) {
-      this.$refs.navPoint.children.forEach(
-        (i) => (i.style.background = "#c1bebe")
-      );
-      this.$refs.navPoint.children[parseInt(val / 3)].style.background =
-        "#ffffff";
     },
   },
 };

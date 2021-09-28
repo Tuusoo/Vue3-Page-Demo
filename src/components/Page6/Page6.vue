@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="bottom container">
-    <div class="text">😈 Plagiarize by Tuusoo~</div>
+    <div class="text">😈 Plagiarized by Tuusoo~</div>
     <div class="icons">
       <div class="icon icon1" @mouseover="hover1" @mouseout="hover1">
         <img
@@ -96,6 +96,10 @@
 import NumTimer from "./numTimer.vue";
 
 export default {
+  name: "Page6",
+  components: {
+    NumTimer,
+  },
   data() {
     return {
       icon1Hover: false,
@@ -109,8 +113,8 @@ export default {
       num4: 150,
     };
   },
-  components: {
-    NumTimer,
+  mounted() {
+    window.addEventListener("scroll", this.numDistance);
   },
   methods: {
     hover1() {
@@ -137,9 +141,6 @@ export default {
         this.isNumShow = false;
       }
     },
-  },
-  mounted() {
-    window.addEventListener("scroll", this.numDistance);
   },
 };
 </script>

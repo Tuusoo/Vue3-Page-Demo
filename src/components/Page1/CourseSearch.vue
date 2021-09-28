@@ -29,6 +29,10 @@
 import { NSelect } from "naive-ui";
 
 export default {
+  name: "CourseSearch",
+  components: {
+    NSelect,
+  },
   data() {
     return {
       degree: "",
@@ -41,9 +45,6 @@ export default {
         { label: "Doctorate/Prof Degree", value: "Doctorate/Prof Degree" },
       ],
     };
-  },
-  components: {
-    NSelect,
   },
 };
 </script>

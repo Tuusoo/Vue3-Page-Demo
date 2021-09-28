@@ -37,6 +37,11 @@ export default {
       topDistance: 0,
     };
   },
+  watch: {
+    topDistance(val) {
+      this.isTop = val > 200 ? false : true;
+    },
+  },
   mounted() {
     window.addEventListener("scroll", this.handleScrollx);
   },
@@ -46,11 +51,6 @@ export default {
     },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    },
-  },
-  watch: {
-    topDistance(val) {
-      this.isTop = val > 200 ? false : true;
     },
   },
 };

@@ -13,22 +13,10 @@
 
 <script>
 export default {
+  name: "Page5Card",
   props: {
     person: Object,
   },
-  // computed: {
-  //   pic() {
-  //     switch(this.personName){
-  //       case "Mary Jane":
-  //         return require("../../imgs/te1.jpg");
-  //       case "Olivia Ruth":
-  //         return require("../../imgs/te3.jpg");
-  //       case "Blake Joe":
-  //         return require("../../imgs/te2.jpg");
-  //       case ""
-  //     }
-  //   }
-  // }
 };
 </script>
 

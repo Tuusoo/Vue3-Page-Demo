@@ -30,6 +30,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Page4",
+}
+</script>
+
 <style lang="less" scoped>
 .container {
   width: 1100px;

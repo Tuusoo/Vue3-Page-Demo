@@ -28,6 +28,7 @@
 import Card from "./Card.vue";
 
 export default {
+  name: "Page3",
   components: {
     Card,
   },
