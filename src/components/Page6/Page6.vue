@@ -114,7 +114,11 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.numDistance);
+    const numsObserver = new IntersectionObserver(() => {
+      this.isNumShow = !this.isNumShow;
+    });
+
+    numsObserver.observe(this.$refs.nums);
   },
   methods: {
     hover1() {
@@ -128,18 +132,6 @@ export default {
     },
     hover4() {
       this.icon4Hover = !this.icon4Hover;
-    },
-    numDistance() {
-      if (
-        this.$refs.nums.offsetTop -
-          document.documentElement.scrollTop -
-          document.documentElement.clientHeight <
-        0
-      ) {
-        this.isNumShow = true;
-      } else {
-        this.isNumShow = false;
-      }
     },
   },
 };
